@@ -32,7 +32,7 @@ export async function exchangeCodeForToken(
       'content-type': 'application/json;charset=UTF-8',
     },
   }
-  const res = await fetch(`${env.AUTH0_ISSUER_BASE_URL}/oauth/token`, init)
+  const res = await fetch(`${env.AUTH0_DOMAIN}/oauth/token`, init)
   return await res.json()
 }
 
@@ -52,7 +52,7 @@ export const parseUser = async (authResponse: AuthResponse) => {
 export const verifyToken = async (token: string): Promise<[err: jwt.VerifyErrors | null, decoded: jwt.JwtPayload | undefined]> => {
   return new Promise((resolve, reject) => {
   const client = jwksClient({
-    jwksUri: `${env.AUTH0_ISSUER_BASE_URL}/.well-known/jwks.json`,
+    jwksUri: `${env.AUTH0_ISSUER_DOMAIN}/.well-known/jwks.json`,
     requestHeaders: {}, // Optional
     timeout: 30000 // Defaults to 30s
   });
@@ -113,7 +113,7 @@ export function handleRedirect(
     audience: `${env.AUTH0_AUDIENCE}`,
     screen_hint,
   }).toString()
-  const redirectUrl = `${env.AUTH0_ISSUER_BASE_URL}/authorize?${queryString}`
+  const redirectUrl = `${env.AUTH0_ISSUER_DOMAIN}/authorize?${queryString}`
 
   return Response.redirect(redirectUrl, 302)
 }
