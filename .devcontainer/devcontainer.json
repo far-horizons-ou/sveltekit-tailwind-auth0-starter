@@ -10,7 +10,9 @@
 	"features": {
 		"ghcr.io/devcontainers/features/sshd:1": {
         "version": "latest"
-    }
+	},
+	"ghcr.io/NicoVIII/devcontainer-features/pnpm:2": {},
+	"ghcr.io/devcontainers/features/git-lfs:1": {}
 	}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
