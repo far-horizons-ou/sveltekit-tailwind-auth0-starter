@@ -125,22 +125,26 @@ export async function handleCallback(request: RequestEvent): Promise<Response> {
 
   const token = await exchangeCodeForToken(request)
 
+  // This will throw an error if the token is invalid
   const user = await parseUser(token)
-  console.log('user', user)
 
-  //return new Response(JSON.stringify(token, null, 2))
-  //const res = Response.redirect(redirectUrl.toString(), 302)
   const authCookie = cookie.serialize('authToken', token.access_token, {
     secure: true,
     maxAge: token.expires_in,
     path: '/',
-  })
-  //res.headers.append('Set-Cookie', authCookie)
+  }) as string
+
+  const userCookie = cookie.serialize('twirrlUser', JSON.stringify(user), {
+    secure: true,
+    maxAge: token.expires_in,
+    path: '/',
+  }) as string
+
   const res = new Response(null, {
     status: 302,
     headers: {
       Location: redirectUrl.toString(),
-      'Set-Cookie': authCookie,
+      'Set-Cookie': [authCookie, userCookie],
     },
   })
   return res
