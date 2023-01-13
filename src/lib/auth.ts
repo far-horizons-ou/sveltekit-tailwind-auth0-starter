@@ -118,6 +118,20 @@ export function handleRedirect(
   return Response.redirect(redirectUrl, 302)
 }
 
+export function handleLogoutRedirect(request: RequestEvent): Response {
+  const returnUrl = new URL(request.url)
+  returnUrl.pathname = "/"
+
+  const queryString = new URLSearchParams({
+    client_id: `${env.AUTH0_CLIENT_ID}`,
+    returnTo: `${returnUrl.toString()}`,
+  }).toString()
+  const redirectUrl = `https://${env.AUTH0_DOMAIN}/v2/logout?${queryString}`
+
+  return Response.redirect(redirectUrl, 302)
+}
+
+
 export async function handleCallback(request: RequestEvent): Promise<Response> {
   const redirectUrl = new URL(request.url)
   redirectUrl.pathname = '/app'
