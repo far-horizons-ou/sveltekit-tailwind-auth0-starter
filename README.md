@@ -16,13 +16,13 @@ This project provides a comprehensive starting point for developers looking to c
 
 ## Features
 
-SvelteKit - A JavaScript framework for creating efficient web apps.
+**SvelteKit** - A JavaScript framework for creating efficient web apps.
 
-Tailwind CSS - A utility-first CSS framework for rapidly building custom designs.
+**Tailwind CSS** - A utility-first CSS framework for rapidly building custom designs.
 
-Auth0 - A flexible, drop-in solution to add authentication and authorization services to your applications.
+**Auth0** - A flexible, drop-in solution to add authentication and authorization services to your applications.
 
-Devcontainers - A development environment defined within your project for Visual Studio Code and Docker.
+**Devcontainers** - A development environment defined within your project for Visual Studio Code and Docker.
 
 ## Usage
 
