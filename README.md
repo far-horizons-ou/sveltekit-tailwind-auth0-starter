@@ -12,7 +12,7 @@
 
 ## Introduction
 
-This project provides a comprehensive starting point for developers looking to create modern web applications using SvelteKit, Tailwind CSS, and Auth0. The boilerplate comes pre-configured with the popular JavaScript framework SvelteKit, the utility-first CSS framework Tailwind CSS, and Auth0 for secure user authentication. This project is ideal for developers who want to jumpstart their web development process, focusing on creating unique features instead of setting up the environment.
+ The project comes pre-configured with the popular JavaScript framework SvelteKit, the utility-first CSS framework Tailwind CSS, and Auth0 for secure user authentication. Ideal for developers who want to jumpstart their web development process.
 
 ## Features
 
