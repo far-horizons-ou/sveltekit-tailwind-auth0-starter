@@ -1,29 +1,38 @@
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# SvelteKit-Tailwind-Auth0 Starter
 
-## Creating a project
+### A modern boilerplate for quickly setting up SvelteKit, Tailwind CSS, and Auth0 authentication
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Table of Contents
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Usage](#usage)
+4. [Building](#building)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Introduction
 
-## Developing
+ The project comes pre-configured with the popular JavaScript framework SvelteKit, the utility-first CSS framework Tailwind CSS, and Auth0 for secure user authentication. Ideal for developers who want to jumpstart their web development process.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Features
 
-```bash
-npm run dev
+**SvelteKit** - A JavaScript framework for creating efficient web apps.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+**Tailwind CSS** - A utility-first CSS framework for rapidly building custom designs.
+
+**Auth0** - A flexible, drop-in solution to add authentication and authorization services to your applications.
+
+**Devcontainers** - A development environment defined within your project for Visual Studio Code and Docker.
+
+## Usage
+
+Clone the repository to your local machine.
+
+Install the project dependencies using `npm install`.
+
+Copy your Auth0 settings into your .env file in the root of the project - see `.env-example` for reference.
+
+Run `npm run dev` to start the development server.
 
 ## Building
 
