@@ -32,7 +32,7 @@ Install the project dependencies using `npm install`.
 
 Copy your Auth0 settings into your .env file in the root of the project - see `.env-example` for reference.
 
-Run `npm run dev` or  to start the development server.
+Run `npm run dev` to start the development server.
 
 ## Building
 
